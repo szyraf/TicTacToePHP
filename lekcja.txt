@@ -1,0 +1,45 @@
+------------ index.php -------------
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function send() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST", "ajax.php", true);
+ 
+            xhttp.onreadystatechange = function () {
+                console.log(this.readyState); // ajaxloader'y
+                if (this.readyState == 4 && this.status == 200) {
+                    let json = JSON.parse(this.responseText);
+                    console.log(json);
+                }
+            };
+ 
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("fname=Henry&lname=" + encodeURIComponent("ąść"));
+ 
+            // php - rawurldecode
+        }
+ 
+        window.addEventListener('DOMContentLoaded', (event) => {
+            send();
+        });
+    </script>
+</head>
+ 
+<body>
+</body>
+ 
+</html>
+ 
+ 
+-------------- ajax.php ----------------
+<?php
+$_POST['age'] = 100;
+//print_r($_POST); // $_GET
+echo json_encode($_POST); // json_decode

@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    text-align: center;
+}
+
+.plansza {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.pole {
+    /* background-color: #fffecd; */
+    height: 32%;
+    width: 32%;
+    float: left;
+    border: 1px solid black;
+    cursor: pointer; 
+}
