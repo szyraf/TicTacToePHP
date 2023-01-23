@@ -1,24 +1,51 @@
 * {
-    margin: 0px;
-    padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 
 body {
-    text-align: center;
+	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+	margin-top: 20px;
 }
 
 .plansza {
-    height: 150px;
-    width: 150px;
-    margin: auto;
-    border-collapse: collapse;
+	height: 150px;
+	width: 150px;
+	margin: auto;
+	border-collapse: collapse;
 }
 
 .pole {
-    /* background-color: #fffecd; */
-    height: 32%;
-    width: 32%;
-    float: left;
-    border: 1px solid black;
-    cursor: pointer; 
+	/* background-color: #fffecd; */
+	height: 32%;
+	width: 32%;
+	float: left;
+	border: 1px solid black;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+	font-size: 30px;
+}
+
+#wybierzGracza,
+#wybrano,
+#ruch,
+#wygrana {
+	font-size: 30px;
+}
+
+#wybierzGracza div {
+	background-color: lightgray;
+	display: inline-block;
+	cursor: pointer;
+}
+
+#ruch,
+#wygrana {
+	margin-top: 20px;
 }
